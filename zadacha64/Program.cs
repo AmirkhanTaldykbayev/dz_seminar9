@@ -6,10 +6,22 @@
 Console.WriteLine("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
-string ShowNaturalNumbers(int N)
+/// <summary>
+/// Метод вывода натуральных чисел от N до 1
+/// </summary>
+/// <param name="N">Число, введенное из консоли</param>
+/// <returns>Заполненная строка натуральных чисел от N до 1</returns>
+string ShowIntNumbers(int N)
 {
-    if(N == 1) return N.ToString();
-    return (N + ", " + ShowNaturalNumbers(N - 1));
+    if (N == 1) return N.ToString();
+    return (N + ", " + ShowIntNumbers(N - 1));
 }
 
-Console.WriteLine(ShowNaturalNumbers(N));
+if (N > 0)
+{
+    Console.WriteLine(ShowIntNumbers(N));
+}
+else
+{
+    Console.WriteLine("Введенное число не является натуральным!");
+}
