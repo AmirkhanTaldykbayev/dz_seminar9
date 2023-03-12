@@ -7,6 +7,12 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе неотрицательное число: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
+/// <summary>
+/// Функция Аккермана
+/// </summary>
+/// <param name="m">Первое неотрицательное число</param>
+/// <param name="n">Второе неотрицитальное число</param>
+/// <returns>Результат вычисления</returns>
 int GetAckermann(int m, int n)
 {
     if (m == 0) return n + 1;
